@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body style="background:linear-gradient(to right,orange, white, green);" >
+    <div   class="outer-container" style="display: flex; justify-content: center;align-items: center;margin-top: 90px;">
+        <div class="container jumbotron" style="margin: auto; display: flex; height: 600px;width: 600px; border-radius: 50%; background-color: rgb(185, 152, 224);">
+            <span class="badge rounded-pill bg-danger" id="display" style="text-align: center; font-size: large;"></span>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script>
+        'use strict';
+        let timer=10;
+        let time = document.getElementById('display');
+        time.style.margin= "auto";
+        time.style.textAlign = "center";
+        // time.style.border = "black 1px dotted"
+        time.style.maxWidth ="200px"
+       
+        setTimeout(() => {
+            time.style.fontSize = '80px'
+            time.innerHTML = timer--;
+            setTimeout(() =>{
+                time.className = "badge rounded-pill bg-light text-dark";
+                
+                time.innerHTML = timer--;
+                setTimeout(() =>{
+                    time.className = "badge rounded-pill bg-danger";
+                    time.innerHTML = timer--;
+                    setTimeout(() =>{
+                        time.className = "badge rounded-pill bg-light text-dark";
+                        time.innerHTML = timer--;
+                        setTimeout(() =>{
+                            time.className = "badge rounded-pill bg-danger";
+                            time.innerHTML = timer--;
+                            setTimeout(() =>{
+                                time.className = "badge rounded-pill bg-light text-dark";
+                                time.innerHTML = timer--;
+                                setTimeout(() =>{
+                                    time.className = "badge rounded-pill bg-danger";
+                                    time.innerHTML = timer--;
+                                    setTimeout(() =>{
+                                        time.className = "badge rounded-pill bg-light text-dark";
+                                        time.innerHTML = timer--;
+                                        setTimeout(() =>{
+                                            time.className = "badge rounded-pill bg-danger";
+                                            time.innerHTML = timer--;
+                                            setTimeout(() =>{
+                                                time.className = "badge rounded-pill bg-light text-dark";
+                                                time.innerHTML = timer--;
+                                                setTimeout(() =>{
+                                                    time.style.fontSize = "40px";
+                                                    time.style.maxWidth = "700px";
+                                                    time.style.maxHeight = "200px";
+                                                    time.style.backgroundColor = 'none';
+                                                    time.className = "badge bg-light text-dark";
+                                                    time.innerHTML = "Happy Independence Day!"
+                                                    let k = document.querySelector('.container');
+                                                    k.style.background = "url('flag india.png')";
+                                                    k.style.backgroundSize = 'cover';
+                                                    k.style.backgroundPosition = 'center' 
+
+                                                    
+                                                },1000)
+                                            },1000)
+                                        },1000)
+                                    },1000)
+                                },1000)
+                            },1000)
+                        },1000)
+                    },1000)     
+                },1000)
+            },1000)
+        }, 1000); 
+    </script>
+</body>
+</html>
